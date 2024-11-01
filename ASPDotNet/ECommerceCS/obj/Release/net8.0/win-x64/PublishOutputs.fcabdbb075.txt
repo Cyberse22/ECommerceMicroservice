@@ -1,0 +1,11 @@
+D:\ECommerceMicroservice\ASPDotNet\ECommerceCS\obj\Release\net8.0\win-x64\PubTmp\Out\ECommerceCS.exe
+D:\ECommerceMicroservice\ASPDotNet\ECommerceCS\obj\Release\net8.0\win-x64\PubTmp\Out\appsettings.Development.json
+D:\ECommerceMicroservice\ASPDotNet\ECommerceCS\obj\Release\net8.0\win-x64\PubTmp\Out\appsettings.json
+D:\ECommerceMicroservice\ASPDotNet\ECommerceCS\obj\Release\net8.0\win-x64\PubTmp\Out\ECommerceCS.dll
+D:\ECommerceMicroservice\ASPDotNet\ECommerceCS\obj\Release\net8.0\win-x64\PubTmp\Out\ECommerceCS.deps.json
+D:\ECommerceMicroservice\ASPDotNet\ECommerceCS\obj\Release\net8.0\win-x64\PubTmp\Out\ECommerceCS.runtimeconfig.json
+D:\ECommerceMicroservice\ASPDotNet\ECommerceCS\obj\Release\net8.0\win-x64\PubTmp\Out\ECommerceCS.pdb
+D:\ECommerceMicroservice\ASPDotNet\ECommerceCS\obj\Release\net8.0\win-x64\PubTmp\Out\Microsoft.OpenApi.dll
+D:\ECommerceMicroservice\ASPDotNet\ECommerceCS\obj\Release\net8.0\win-x64\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+D:\ECommerceMicroservice\ASPDotNet\ECommerceCS\obj\Release\net8.0\win-x64\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\ECommerceMicroservice\ASPDotNet\ECommerceCS\obj\Release\net8.0\win-x64\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
