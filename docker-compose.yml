@@ -1,0 +1,92 @@
+services:
+  # # PostgreSQL
+  # postgres:
+  #   image: postgres:latest
+  #   ports:
+  #     - "5433:5432"
+  #   environment:
+  #     - POSTGRES_USER=postgres
+  #     - POSTGRES_PASSWORD=Admin@123
+  #     - POSTGRES_DB=UserDb
+  #   networks:
+  #     - my_network
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "pg_isready -U postgres"]
+  #     interval: 5s
+  #     timeout: 5s
+  #     retries: 5
+
+  # # Migration service
+  # migration:
+  #   build:
+  #     context: .
+  #     dockerfile: UserService/Dockerfile
+  #   command: ["dotnet", "ef", "database", "update"]
+  #   environment:
+  #     - ASPNETCORE_ENVIRONMENT=Development
+  #     - ConnectionStrings__PostgreSQLConnection=Host=postgres;Port=5432;Database=UserDb;Username=postgres;Password=Admin@123
+  #   depends_on:
+  #     postgres:
+  #       condition: service_healthy
+  #   networks:
+  #     - my_network
+
+  # Redis
+  redis:
+    image: "redis:alpine"
+    container_name: redis
+    ports:
+      - "6379:6379"
+    restart: always
+    networks:
+      - my_network
+
+  # CartService
+  cartservice:
+    networks:
+      - my_network
+    build:
+      context: .
+      dockerfile: CartService/Dockerfile
+    ports:
+      - "7001:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__RedisConnection=redis:6379
+    depends_on:
+      - redis
+
+  # # UserService
+  # userservice:
+  #   build:
+  #     context: .
+  #     dockerfile: UserService/Dockerfile
+  #   ports:
+  #     - "6001:8080"
+  #   environment:
+  #     - ASPNETCORE_ENVIRONMENT=Development
+  #     - ASPNETCORE_URLS=http://+:8080
+  #     - ConnectionStrings__PostgreSQLConnection=Host=postgres;Port=5432;Database=UserDb;Username=postgres;Password=Admin@123
+  #     - JWT__ValidAudience=http://localhost:6001
+  #     - JWT__ValidIssuer=http://localhost:6001
+  #     - JWT__Secret=ECommerceSecret@12345678900987654321
+  #   depends_on:
+  #     - postgres
+  #   networks:
+  #     - my_network
+
+  # OcelotGateway
+  ocelotgateway:
+    build:
+      context: .
+      dockerfile: OcelotGateway/Dockerfile
+    ports:
+      - "4000:8080"  
+    networks:
+      - my_network
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+networks:
+  my_network:
+    driver: bridge

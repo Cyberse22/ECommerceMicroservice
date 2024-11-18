@@ -1,0 +1,2 @@
+C:\Users\kieth\source\repos\ECommerceMicroservice\ProductService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\kieth\source\repos\ECommerceMicroservice\ProductService\obj\Debug\net8.0\staticwebassets.build.json
