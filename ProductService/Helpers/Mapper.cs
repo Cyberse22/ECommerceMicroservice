@@ -4,9 +4,9 @@ using AutoMapper;
 
 namespace ProductService.Helpers
 {
-    public class AutoMapperProfile : Profile
+    public class Mapper : Profile
     {
-        public AutoMapperProfile()
+        public Mapper()
         {
             CreateMap<Product, ProductModel>();
             CreateMap<ProductModel, Product>()

@@ -5,7 +5,7 @@ using MongoDB.Driver;
 using ProductService.Data;
 using ProductService.Data.MongoDB;
 using ProductService.Models;
-using ProductService.Service;
+using ProductService.Services;
 
 namespace ProductService.Controllers
 {

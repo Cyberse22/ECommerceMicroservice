@@ -13,6 +13,8 @@ using UserService.Repositories;
 using UserService.Repositories.Impl;
 using UserService.Services;
 using UserService.Services.Impl;
+using System.Diagnostics;
+using Microsoft.AspNetCore.DataProtection;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("PostgreSQLConnection");
@@ -43,7 +45,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(option =>
 {
     option.SwaggerDoc("UserService", new OpenApiInfo { Title = "User Service API", Version = "v1" });
-    option.SwaggerDoc("ProductService", new OpenApiInfo { Title = "Product Service API", Version = "v1" });
     option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,
@@ -66,20 +67,6 @@ builder.Services.AddSwaggerGen(option =>
             },
             new string[]{}
         }
-    });
-
-    // Lọc controller theo tên namespace để thêm vào tài liệu tương ứng
-    option.DocInclusionPredicate((docName, apiDesc) =>
-    {
-        if (docName == "UserService")
-        {
-            return apiDesc.ActionDescriptor.RouteValues["controller"]?.Contains("Account") == true;
-        }
-        else if (docName == "ProductService")
-        {
-            return apiDesc.ActionDescriptor.RouteValues["controller"]?.Contains("Product") == true;
-        }
-        return false;
     });
 });
 
@@ -114,6 +101,10 @@ builder.Services.AddAuthorization(options =>
 
 builder.Services.AddAutoMapper(typeof(Program));
 
+builder.Services.AddDataProtection()
+    .PersistKeysToFileSystem(new DirectoryInfo(@"/keys"))
+    .SetApplicationName("ECommerceMicroservice");
+
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
@@ -144,9 +135,14 @@ using (var scope = app.Services.CreateScope())
     app.UseSwaggerUI(options =>
     {
         options.SwaggerEndpoint("/swagger/UserService/swagger.json", "User Service API");
-        options.SwaggerEndpoint("/swagger/ProductService/swagger.json", "Product Service API");
     });
 }
+
+//using (var scope = app.Services.CreateScope())
+//{
+//    var context = scope.ServiceProvider.GetRequiredService<UserDbContext>();
+//    context.Database.Migrate();
+//}
 
 app.UseCors("AllowSpecificOrigin");
 

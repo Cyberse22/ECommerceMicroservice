@@ -1,35 +1,34 @@
-# Base image for running the application (ASP.NET Core Runtime)
-FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
+# See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+# This stage is used when running from VS in fast mode (Default for Debug configuration)
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+USER $APP_UID
 WORKDIR /app
 EXPOSE 8080
+EXPOSE 8081
 
-# Image for building the application (SDK)
-FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+
+# This stage is used to build the service project
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-
-# Install Entity Framework tools
-RUN dotnet tool install --global dotnet-ef
-ENV PATH="${PATH}:/root/.dotnet/tools"
-
-# Copy only the UserService project files
 COPY ["UserService/UserService.csproj", "UserService/"]
-RUN dotnet restore "UserService/UserService.csproj"
-
-# Copy only the UserService source code
-COPY UserService/ UserService/
+RUN dotnet restore "./UserService/UserService.csproj"
+COPY . .
 WORKDIR "/src/UserService"
-RUN dotnet build "UserService.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "./UserService.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
-# Publish the application
+# Install dotnet-ef and add it to the PATH
+RUN dotnet tool install --global dotnet-ef
+ENV PATH="$PATH:/root/.dotnet/tools"
+
+# This stage is used to publish the service project to be copied to the final stage
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "UserService.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./UserService.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
-# Final stage: use the runtime image and add migrations
+# This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-
-# Set entry point to run migrations and start the app
-ENTRYPOINT ["bash", "-c", "dotnet ef database update --no-build && dotnet UserService.dll"]
+ENTRYPOINT ["dotnet", "UserService.dll"]

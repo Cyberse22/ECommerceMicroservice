@@ -338,6 +338,9 @@
           },
           "metadataOptions": {
             "$ref": "#/components/schemas/FileMetadataOptions"
+          },
+          "securityOptions": {
+            "$ref": "#/components/schemas/FileSecurityOptions"
           }
         },
         "additionalProperties": false

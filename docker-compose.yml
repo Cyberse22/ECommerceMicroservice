@@ -1,92 +1,137 @@
 services:
-  # # PostgreSQL
-  # postgres:
-  #   image: postgres:latest
-  #   ports:
-  #     - "5433:5432"
-  #   environment:
-  #     - POSTGRES_USER=postgres
-  #     - POSTGRES_PASSWORD=Admin@123
-  #     - POSTGRES_DB=UserDb
-  #   networks:
-  #     - my_network
-  #   healthcheck:
-  #     test: ["CMD-SHELL", "pg_isready -U postgres"]
-  #     interval: 5s
-  #     timeout: 5s
-  #     retries: 5
-
-  # # Migration service
-  # migration:
-  #   build:
-  #     context: .
-  #     dockerfile: UserService/Dockerfile
-  #   command: ["dotnet", "ef", "database", "update"]
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ConnectionStrings__PostgreSQLConnection=Host=postgres;Port=5432;Database=UserDb;Username=postgres;Password=Admin@123
-  #   depends_on:
-  #     postgres:
-  #       condition: service_healthy
-  #   networks:
-  #     - my_network
+  # PostgreSQL
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Admin@123
+      POSTGRES_DB: UserDb
+    ports:
+      - 5432:5432
+    networks:
+      - my_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
 
   # Redis
   redis:
-    image: "redis:alpine"
+    image: redis:alpine
     container_name: redis
+    restart: always
     ports:
       - "6379:6379"
-    restart: always
     networks:
       - my_network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    volumes:
+      - redis_data:/data
+
+  # MongoDB
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: Admin@123
+    networks:
+      - my_network
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.runCommand('ping').ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - mongodb_data:/data/db
 
   # CartService
   cartservice:
-    networks:
-      - my_network
     build:
       context: .
       dockerfile: CartService/Dockerfile
+    container_name: cartservice
     ports:
-      - "7001:8080"
+      - "7004:8080"
+    networks:
+      - my_network
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__RedisConnection=redis:6379
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__RedisConnection: redis:6379
     depends_on:
       - redis
-
-  # # UserService
-  # userservice:
-  #   build:
-  #     context: .
-  #     dockerfile: UserService/Dockerfile
-  #   ports:
-  #     - "6001:8080"
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://+:8080
-  #     - ConnectionStrings__PostgreSQLConnection=Host=postgres;Port=5432;Database=UserDb;Username=postgres;Password=Admin@123
-  #     - JWT__ValidAudience=http://localhost:6001
-  #     - JWT__ValidIssuer=http://localhost:6001
-  #     - JWT__Secret=ECommerceSecret@12345678900987654321
-  #   depends_on:
-  #     - postgres
-  #   networks:
-  #     - my_network
+    volumes:
+      - ./CartService/appsettings.json:/app/appsettings.json
 
   # OcelotGateway
   ocelotgateway:
     build:
       context: .
       dockerfile: OcelotGateway/Dockerfile
+    container_name: ocelotgateway
     ports:
-      - "4000:8080"  
+      - "2001:8080"
     networks:
       - my_network
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      ASPNETCORE_ENVIRONMENT: Development
+
+  # UserService
+  userservice:
+    build:
+      context: .
+      dockerfile: UserService/Dockerfile
+    container_name: userservice
+    ports:
+      - "7001:8080"
+    networks:
+      - my_network
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__PostgreSQlConnection: Host=postgres;Port=5432;Database=UserDb;Username=postgres;Password=Admin@123
+      EF_MIGATE: true
+    depends_on:
+      - postgres
+    volumes:
+      - ./UserService/appsettings.json:/app/appsettings.json
+      - ./keys:/keys
+  
+  # ProductService
+  productservice:
+    build:
+      context: .
+      dockerfile: ProductService/Dockerfile
+    container_name: productservice
+    ports:
+      - "7007:8080"
+    networks:
+      - my_network
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      MONGO_CONNECTION_STRING: "mongodb://admin:Admin%40123@mongodb:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.3"
+    depends_on:
+      - mongodb
 
 networks:
   my_network:
     driver: bridge
+
+volumes:
+  redis_data:
+    driver: local
+  postgres_data:
+    driver: local
+  mongodb_data:
+    driver: local

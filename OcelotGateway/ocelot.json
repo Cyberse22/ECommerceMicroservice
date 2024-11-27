@@ -48,10 +48,23 @@
       ],
       "UpstreamPathTemplate": "/cart/{userId}",
       "UpstreamHttpMethod": [ "DELETE" ]
-    }
+    },
+    //UserService
+    //{
+    //  "DownstreamPathTemplate": "/api/User/{userId}",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "cartservice",
+    //      "Port": 8080
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/cart/{userId}",
+    //  "UpstreamHttpMethod": [ "DELETE" ]
+    //}
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:4000"
+    "BaseUrl": "http://localhost:2001"
   },
   "Logging": {
     "LogLevel": {

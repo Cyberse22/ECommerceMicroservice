@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using UserService.Data;
 using UserService.Models;
 using UserService.Services;
@@ -66,6 +67,21 @@ namespace UserService.Controllers
                 return BadRequest();
             }
             return Ok(result);
+        }
+        [HttpGet("GetCurrentUser")]
+        public async Task<IActionResult> GetCurrentUser()
+        {
+            var email = User.FindFirstValue(ClaimTypes.Email);
+            if (string.IsNullOrEmpty(email))
+            {
+                return Unauthorized("User not exists");
+            }
+            var user = await _accountService.GetCurrentUserAsync();
+            if (user == null)
+            {
+                return NotFound("User Not Found");
+            }
+            return Ok(user);
         }
     }
 }

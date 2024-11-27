@@ -1,4 +1,4 @@
-﻿namespace ProductService.Data.DbContext
+﻿namespace ProductService.Data.MongoDB
 {
     public class MongoDbSettings : IMongoDbSettings
     {
