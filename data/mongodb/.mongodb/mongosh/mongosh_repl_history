@@ -1,0 +1,9 @@
+db.productcollection.find()
+use productdb
+use Productdn
+db.productcollection.find()
+db.products.find()
+show dbs
+use productdb
+show dbs
+use productdb

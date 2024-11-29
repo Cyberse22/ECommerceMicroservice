@@ -30,7 +30,20 @@ namespace ProductService.Repositories.Impl
 
         public async Task UpdateProductAsync(string productId, Product product)
         {
-            await _products.ReplaceOneAsync(p => p.ProductId == productId, product);
+            var updateDefinition = Builders<Product>.Update
+                .Set(p => p.ProductName, product.ProductName)
+                .Set(p => p.ProductDescription, product.ProductDescription)
+                .Set(p => p.ProductPrice, product.ProductPrice)
+                .Set(p => p.IsActive, product.IsActive);
+            // Các trường cần cập nhật khác nếu cần
+
+            var result = await _products.UpdateOneAsync(p => p.ProductId == productId, updateDefinition);
+
+            // Kiểm tra nếu không tìm thấy sản phẩm để cập nhật
+            if (result.MatchedCount == 0)
+            {
+                throw new Exception("Product not found");
+            }
         }
     }
 }

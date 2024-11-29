@@ -1,13 +1,13 @@
 Port: 
 - 2000: Ocelot 
 - 7001: UserService
-- 7003: CartService
-- 7005: ProductService
-- 7007: CategoryService
-- 7009: OrderService
-- 7011: InventoryService
+- 7004: CartService
+- 7007: ProductService
+- 7010: CategoryService
 - 7013: OrderService
-- 7015: PaymentService
+- 7016: InventoryService
+- 7019: OrderService
+- 7022: PaymentService
 Lỗi thường gặp khi mới dùng Docker:
 - Quên set Network trong docker-compose: Luôn phải có một Network riêng để sử dụng và gọi dịch vụ cho nhau.
 - Quên setting Database: Trong Docker, khi mà Database được sử dụng trong Docker sẽ phải setting riêng Database đó trong code, vì Code sẽ trực tiếp gọi đến Server trong Docker.
@@ -15,4 +15,5 @@ Lỗi thường gặp khi mới dùng Docker:
 - Sau khi Deploy, nếu có Exited hãy đọc Log và kiểm tra lỗi.
 - Thêm biến container_name để Container có một tên riêng và dễ dàng chạy độc lập với nhau
 - Với PostgreSQL, khi khởi động máy sẽ cùng lúc khởi động Port 5432 của PostgreSQL, vô tình khi Build Image và Run Container thì sẽ bị lỗi xung đột Port
-
+- Kiểm tra .dockerignore trước khi pull, vì Docker sẽ bỏ qua những thứ có tên được nêu trong đó
+- 

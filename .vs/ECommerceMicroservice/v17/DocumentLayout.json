@@ -1,54 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{F6ADE06F-0A3D-4A23-989C-3F925B55513F}|ProductService\\ProductService.csproj|c:\\users\\kieth\\source\\repos\\ecommercemicroservice\\productservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{F6ADE06F-0A3D-4A23-989C-3F925B55513F}|ProductService\\ProductService.csproj|solutionrelative:productservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7775F32C-D383-40B4-9C77-CE2B89C9AB07}|UserService\\UserService.csproj|c:\\users\\kieth\\source\\repos\\ecommercemicroservice\\userservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{7775F32C-D383-40B4-9C77-CE2B89C9AB07}|UserService\\UserService.csproj|solutionrelative:userservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\UserService\\Dockerfile",
-              "RelativeDocumentMoniker": "UserService\\Dockerfile",
-              "ToolTip": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\UserService\\Dockerfile",
-              "RelativeToolTip": "UserService\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-27T14:24:49.711Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\ProductService\\Dockerfile",
-              "RelativeDocumentMoniker": "ProductService\\Dockerfile",
-              "ToolTip": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\ProductService\\Dockerfile",
-              "RelativeToolTip": "ProductService\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-27T14:22:19.119Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

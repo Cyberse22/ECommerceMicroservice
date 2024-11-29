@@ -8,7 +8,7 @@ namespace ProductService.Data
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; } = string.Empty;
+        public ObjectId Id { get; set; }
         [BsonElement("createddate")]
         public DateOnly CreatedDate { get; set; }
         [BsonElement("updateddate")]

@@ -55,7 +55,7 @@ services:
       timeout: 5s
       retries: 5
     volumes:
-      - mongodb_data:/data/db
+      - ./data/mongodb:/data/db
 
   # CartService
   cartservice:
@@ -123,6 +123,8 @@ services:
       MONGO_CONNECTION_STRING: "mongodb://admin:Admin%40123@mongodb:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.3"
     depends_on:
       - mongodb
+    volumes:
+      - ./data/products:/app/data/products
 
 networks:
   my_network:
