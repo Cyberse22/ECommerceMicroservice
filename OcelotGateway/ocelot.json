@@ -50,18 +50,54 @@
       "UpstreamHttpMethod": [ "DELETE" ]
     },
     //UserService
-    //{
-    //  "DownstreamPathTemplate": "/api/User/{userId}",
-    //  "DownstreamScheme": "http",
-    //  "DownstreamHostAndPorts": [
-    //    {
-    //      "Host": "cartservice",
-    //      "Port": 8080
-    //    }
-    //  ],
-    //  "UpstreamPathTemplate": "/cart/{userId}",
-    //  "UpstreamHttpMethod": [ "DELETE" ]
-    //}
+    {
+      "DownstreamPathTemplate": "/api/Account/GetCurrentUser",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "userservice",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/account/currentUser",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Account/SignUp",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "userservice",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/account/signUp",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Account/SignIn",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "userservice",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/account/signIn",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Account/ChangePassword",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "userservice",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/account/changePassword",
+      "UpstreamHttpMethod": [ "PUT" ]
+    }
   ],
   "GlobalConfiguration": {
     "BaseUrl": "http://localhost:2001"

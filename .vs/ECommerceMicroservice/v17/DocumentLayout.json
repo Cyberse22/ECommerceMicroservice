@@ -1,12 +1,197 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9D459871-1318-4DE0-A246-6DEFEA7016F8}|CartService\\CartService.csproj|c:\\users\\kieth\\source\\repos\\ecommercemicroservice\\cartservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9D459871-1318-4DE0-A246-6DEFEA7016F8}|CartService\\CartService.csproj|solutionrelative:cartservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85D4EC52-C2DF-4554-9234-3262EF2F22BB}|OcelotGateway\\OcelotGateway.csproj|c:\\users\\kieth\\source\\repos\\ecommercemicroservice\\ocelotgateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{85D4EC52-C2DF-4554-9234-3262EF2F22BB}|OcelotGateway\\OcelotGateway.csproj|solutionrelative:ocelotgateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85D4EC52-C2DF-4554-9234-3262EF2F22BB}|OcelotGateway\\OcelotGateway.csproj|c:\\users\\kieth\\source\\repos\\ecommercemicroservice\\ocelotgateway\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{85D4EC52-C2DF-4554-9234-3262EF2F22BB}|OcelotGateway\\OcelotGateway.csproj|solutionrelative:ocelotgateway\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DC3334F-A80A-414C-AF7B-1BBDBBFA35BE}|OrderService\\OrderService.csproj|c:\\users\\kieth\\source\\repos\\ecommercemicroservice\\orderservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0DC3334F-A80A-414C-AF7B-1BBDBBFA35BE}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DC3334F-A80A-414C-AF7B-1BBDBBFA35BE}|OrderService\\OrderService.csproj|c:\\users\\kieth\\source\\repos\\ecommercemicroservice\\orderservice\\orderservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0DC3334F-A80A-414C-AF7B-1BBDBBFA35BE}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\orderservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DC3334F-A80A-414C-AF7B-1BBDBBFA35BE}|OrderService\\OrderService.csproj|c:\\users\\kieth\\source\\repos\\ecommercemicroservice\\orderservice\\data\\orderstatushistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DC3334F-A80A-414C-AF7B-1BBDBBFA35BE}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\data\\orderstatushistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DC3334F-A80A-414C-AF7B-1BBDBBFA35BE}|OrderService\\OrderService.csproj|c:\\users\\kieth\\source\\repos\\ecommercemicroservice\\orderservice\\helpers\\baseenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DC3334F-A80A-414C-AF7B-1BBDBBFA35BE}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\helpers\\baseenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DC3334F-A80A-414C-AF7B-1BBDBBFA35BE}|OrderService\\OrderService.csproj|c:\\users\\kieth\\source\\repos\\ecommercemicroservice\\orderservice\\data\\shippingdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DC3334F-A80A-414C-AF7B-1BBDBBFA35BE}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\data\\shippingdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DC3334F-A80A-414C-AF7B-1BBDBBFA35BE}|OrderService\\OrderService.csproj|c:\\users\\kieth\\source\\repos\\ecommercemicroservice\\orderservice\\data\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DC3334F-A80A-414C-AF7B-1BBDBBFA35BE}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\data\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DC3334F-A80A-414C-AF7B-1BBDBBFA35BE}|OrderService\\OrderService.csproj|c:\\users\\kieth\\source\\repos\\ecommercemicroservice\\orderservice\\data\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DC3334F-A80A-414C-AF7B-1BBDBBFA35BE}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\data\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DC3334F-A80A-414C-AF7B-1BBDBBFA35BE}|OrderService\\OrderService.csproj|c:\\users\\kieth\\source\\repos\\ecommercemicroservice\\orderservice\\data\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DC3334F-A80A-414C-AF7B-1BBDBBFA35BE}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\data\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\CartService\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "CartService\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\CartService\\Properties\\launchSettings.json",
+              "RelativeToolTip": "CartService\\Properties\\launchSettings.json",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-15T16:18:47.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ocelot.json",
+              "DocumentMoniker": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OcelotGateway\\ocelot.json",
+              "RelativeDocumentMoniker": "OcelotGateway\\ocelot.json",
+              "ToolTip": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OcelotGateway\\ocelot.json",
+              "RelativeToolTip": "OcelotGateway\\ocelot.json",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-15T16:18:33.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OcelotGateway\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "OcelotGateway\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OcelotGateway\\Properties\\launchSettings.json",
+              "RelativeToolTip": "OcelotGateway\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-15T16:18:27.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderService.csproj",
+              "DocumentMoniker": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\OrderService.csproj",
+              "RelativeDocumentMoniker": "OrderService\\OrderService.csproj",
+              "ToolTip": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\OrderService.csproj",
+              "RelativeToolTip": "OrderService\\OrderService.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-15T16:15:05.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\Dockerfile",
+              "RelativeDocumentMoniker": "OrderService\\Dockerfile",
+              "ToolTip": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\Dockerfile",
+              "RelativeToolTip": "OrderService\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-15T16:02:05.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BaseEnum.cs",
+              "DocumentMoniker": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\Helpers\\BaseEnum.cs",
+              "RelativeDocumentMoniker": "OrderService\\Helpers\\BaseEnum.cs",
+              "ToolTip": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\Helpers\\BaseEnum.cs",
+              "RelativeToolTip": "OrderService\\Helpers\\BaseEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T09:27:22.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderStatusHistory.cs",
+              "DocumentMoniker": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\Data\\OrderStatusHistory.cs",
+              "RelativeDocumentMoniker": "OrderService\\Data\\OrderStatusHistory.cs",
+              "ToolTip": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\Data\\OrderStatusHistory.cs",
+              "RelativeToolTip": "OrderService\\Data\\OrderStatusHistory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T09:24:03.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ShippingDetails.cs",
+              "DocumentMoniker": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\Data\\ShippingDetails.cs",
+              "RelativeDocumentMoniker": "OrderService\\Data\\ShippingDetails.cs",
+              "ToolTip": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\Data\\ShippingDetails.cs",
+              "RelativeToolTip": "OrderService\\Data\\ShippingDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T09:17:19.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\Data\\OrderItem.cs",
+              "RelativeDocumentMoniker": "OrderService\\Data\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\Data\\OrderItem.cs",
+              "RelativeToolTip": "OrderService\\Data\\OrderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T09:07:43.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\Data\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "OrderService\\Data\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\Data\\BaseEntity.cs",
+              "RelativeToolTip": "OrderService\\Data\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T08:53:44.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\Data\\Order.cs",
+              "RelativeDocumentMoniker": "OrderService\\Data\\Order.cs",
+              "ToolTip": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\Data\\Order.cs",
+              "RelativeToolTip": "OrderService\\Data\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T08:53:04.596Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
