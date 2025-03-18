@@ -33,9 +33,9 @@ namespace UserService.Repositories.Impl
             return result.Succeeded;
         }
 
-        public async Task<bool> ChangePasswordAsync(string email, string currentPassword, string newPassword)
+        public async Task<bool> ChangePasswordAsync(string phoneNumber, string currentPassword, string newPassword)
         {
-            var user = await _userManager.FindByEmailAsync(email);
+            var user = await _userManager.Users.FirstOrDefaultAsync(u => u.PhoneNumber == phoneNumber);
             if (user != null)
             { 
                 var result = await _userManager.ChangePasswordAsync(user, currentPassword, newPassword);
@@ -44,37 +44,14 @@ namespace UserService.Repositories.Impl
             return false;
         }
 
-        public async Task<IdentityResult> CreateAdmin(CreateAdmin model)
+        public async Task<ApplicationUser> GetCurrentUserAsync(string phoneNumber)
         {
-            var user = new ApplicationUser
-            {
-                FirstName = model.FirstName,
-                LastName = model.LastName,
-                Email = model.Email,
-                DateOfBirth = model.DateOfBirth,
-                Gender = model.Gender,
-                PhoneNumber = model.PhoneNumber,
-            };
-            var result = await _userManager.CreateAsync(user, model.Password);
-            if (result.Succeeded)
-            {
-                if (!await _roleManager.RoleExistsAsync(StaticEntities.UserRoles.Admin))
-                {
-                    await _roleManager.CreateAsync(new IdentityRole(StaticEntities.UserRoles.Admin));
-                }
-                await _userManager.AddToRoleAsync(user, StaticEntities.UserRoles.Admin);
-            }
-            return result;
+            return await _userManager.Users.FirstOrDefaultAsync(u => u.PhoneNumber == phoneNumber);
         }
 
-        public async Task<ApplicationUser> GetCurrentUserAsync(string email)
+        public async Task<SignInResult> SignInAsync(string phoneNumber, string password)
         {
-            return await _userManager.FindByEmailAsync(email);
-        }
-
-        public async Task<SignInResult> SignInAsync(string email, string password)
-        {
-            var user = await _userManager.FindByEmailAsync(email);
+            var user = await _userManager.Users.FirstOrDefaultAsync(u => u.PhoneNumber == phoneNumber);
             if (user == null) 
             { 
                return SignInResult.Failed; 
@@ -90,14 +67,14 @@ namespace UserService.Repositories.Impl
             {
                 authClaims.Add(new Claim(ClaimTypes.Role, role.ToString()));
             }
-            return await _signInManager.PasswordSignInAsync(email, password, false, false);
+            return await _signInManager.PasswordSignInAsync(phoneNumber, password, false, false);
         }
 
         public async Task<IdentityResult> SignUpAsync(SignUpModel model)
         {
             var user = new ApplicationUser
             {
-                UserName = model.Email,
+                UserName = model.PhoneNumber,
                 FirstName = model.FirstName,
                 LastName = model.LastName,
                 Email = model.Email,
@@ -113,6 +90,30 @@ namespace UserService.Repositories.Impl
                     await _roleManager.CreateAsync(new IdentityRole(StaticEntities.UserRoles.Customer));
                 }
                 await _userManager.AddToRoleAsync(user, StaticEntities.UserRoles.Customer);
+            }
+            return result;
+        }
+
+        public async Task<IdentityResult> CreateAdmin(SignUpModel admin)
+        {
+            var user = new ApplicationUser
+            {
+                UserName = admin.PhoneNumber,
+                FirstName = admin.FirstName,
+                LastName = admin.LastName,
+                Email = admin.Email,
+                DateOfBirth = admin.DateOfBirth,
+                Gender = admin.Gender,
+                PhoneNumber = admin.PhoneNumber,
+            };
+            var result = await _userManager.CreateAsync(user, admin.Password);
+            if (result.Succeeded)
+            {
+                if (!await _roleManager.RoleExistsAsync(StaticEntities.UserRoles.Admin))
+                {
+                    await _roleManager.CreateAsync(new IdentityRole(StaticEntities.UserRoles.Admin));
+                }
+                await _userManager.AddToRoleAsync(user, StaticEntities.UserRoles.Admin);
             }
             return result;
         }

@@ -63,6 +63,15 @@
           }
         }
       },
+      "dotenv.net/3.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/dotenv.net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/dotenv.net.dll": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -1312,6 +1321,21 @@
         "lib/netstandard2.0/DnsClient.xml",
         "lib/netstandard2.1/DnsClient.dll",
         "lib/netstandard2.1/DnsClient.xml"
+      ]
+    },
+    "dotenv.net/3.2.1": {
+      "sha512": "2fc2s5PH6wAoWQ8bpyVgz28y9qMs/t8ToiCKqSM6mWpjgg4QQSPtZ0nia0x/OebGLSDbxyOelVH+fULZH7N4mA==",
+      "type": "package",
+      "path": "dotenv.net/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "dotenv.net.3.2.1.nupkg.sha512",
+        "dotenv.net.nuspec",
+        "lib/netstandard1.6/dotenv.net.dll",
+        "lib/netstandard2.0/dotenv.net.dll",
+        "lib/netstandard2.1/dotenv.net.dll"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -3487,27 +3511,28 @@
       "MongoDB.Driver >= 3.0.0",
       "MongoDB.Driver.Core >= 2.30.0",
       "Swashbuckle.AspNetCore >= 6.6.2",
-      "System.Text.Json >= 9.0.0"
+      "System.Text.Json >= 9.0.0",
+      "dotenv.net >= 3.2.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kieth\\.nuget\\packages\\": {},
+    "C:\\Users\\Cyberse\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\ProductService\\ProductService.csproj",
+      "projectUniqueName": "D:\\ECommerceMicroservice\\ProductService\\ProductService.csproj",
       "projectName": "ProductService",
-      "projectPath": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\ProductService\\ProductService.csproj",
-      "packagesPath": "C:\\Users\\kieth\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\ProductService\\obj\\",
+      "projectPath": "D:\\ECommerceMicroservice\\ProductService\\ProductService.csproj",
+      "packagesPath": "C:\\Users\\Cyberse\\.nuget\\packages\\",
+      "outputPath": "D:\\ECommerceMicroservice\\ProductService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\kieth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Cyberse\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3534,7 +3559,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -3581,6 +3606,10 @@
           "System.Text.Json": {
             "target": "Package",
             "version": "[9.0.0, )"
+          },
+          "dotenv.net": {
+            "target": "Package",
+            "version": "[3.2.1, )"
           }
         },
         "imports": [
@@ -3602,7 +3631,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

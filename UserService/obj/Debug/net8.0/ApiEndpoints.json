@@ -17,6 +17,22 @@
   },
   {
     "ContainingType": "UserService.Controllers.AccountController",
+    "Method": "CreateAdmin",
+    "RelativePath": "api/Account/CreateAdmin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "admin",
+        "Type": "UserService.Models.SignUpModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UserService.Controllers.AccountController",
     "Method": "GetCurrentUser",
     "RelativePath": "api/Account/GetCurrentUser",
     "HttpMethod": "GET",

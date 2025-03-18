@@ -72,7 +72,7 @@
       },
       {
         "Name": "model",
-        "Type": "ProductService.Models.ProductModel",
+        "Type": "ProductService.Models.UpdateProductModel",
         "IsRequired": true
       }
     ],

@@ -29,7 +29,7 @@ namespace ProductService.Services.Impl
 
         public async Task<Product> GetProductByIdAsync(string productId) => await _productRepository.GetProductByIdAsync(productId);
 
-        public async Task UpdateProductAsync(string productId, ProductModel model)
+        public async Task UpdateProductAsync(string productId, UpdateProductModel model)
         {
             var product = _mapper.Map<Product>(model);
             await _productRepository.UpdateProductAsync(productId, product);

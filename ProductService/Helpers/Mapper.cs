@@ -11,6 +11,7 @@ namespace ProductService.Helpers
             CreateMap<Product, ProductModel>();
             CreateMap<ProductModel, Product>()
                 .ForMember(dest => dest.Id, otp => otp.Ignore());
+            CreateMap<UpdateProductModel, Product>();
         }
     }
 }

@@ -56,12 +56,12 @@ namespace UserService.Controllers
             {
                 return Unauthorized();
             }
-            var email = currentUser.Email;
-            if(string.IsNullOrEmpty(email))
+            var phoneNumber = currentUser.PhoneNumber;
+            if(string.IsNullOrEmpty(phoneNumber))
             {
                 return Unauthorized();
             }
-            var result = await _accountService.ChangePasswordAsync(email, model.CurrentPassword, model.NewPassword);
+            var result = await _accountService.ChangePasswordAsync(phoneNumber, model.CurrentPassword, model.NewPassword);
             if (!result)
             {
                 return BadRequest();
@@ -71,8 +71,13 @@ namespace UserService.Controllers
         [HttpGet("GetCurrentUser")]
         public async Task<IActionResult> GetCurrentUser()
         {
-            var email = User.FindFirstValue(ClaimTypes.Email);
-            if (string.IsNullOrEmpty(email))
+            //var email = User.FindFirstValue(ClaimTypes.Email);
+            //if (string.IsNullOrEmpty(email))
+            //{
+            //    return Unauthorized("User not exists");
+            //}
+            var phoneNumber = User.FindFirstValue(ClaimTypes.MobilePhone);
+            if (string.IsNullOrEmpty(phoneNumber))
             {
                 return Unauthorized("User not exists");
             }
@@ -82,6 +87,16 @@ namespace UserService.Controllers
                 return NotFound("User Not Found");
             }
             return Ok(user);
+        }
+        [HttpPost("CreateAdmin")]
+        public async Task<IActionResult> CreateAdmin(SignUpModel admin)
+        {
+            var result = await _accountService.CreateAdminAsync(admin);
+            if (result.Succeeded)
+            {
+                return Ok(result.Succeeded);
+            }
+            return StatusCode(500);
         }
     }
 }

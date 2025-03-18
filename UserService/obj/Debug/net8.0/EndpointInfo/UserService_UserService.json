@@ -110,6 +110,37 @@
         }
       }
     },
+    "/api/Account/CreateAdmin": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SignUpModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SignUpModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SignUpModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -172,18 +203,20 @@
       },
       "SignInModel": {
         "required": [
-          "email",
-          "password"
+          "password",
+          "phoneNumber"
         ],
         "type": "object",
         "properties": {
-          "email": {
+          "phoneNumber": {
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "format": "tel"
           },
           "password": {
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "format": "password"
           }
         },
         "additionalProperties": false

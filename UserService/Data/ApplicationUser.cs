@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Identity;
 
 namespace UserService.Data
 {
@@ -11,6 +12,9 @@ namespace UserService.Data
         public string? Gender { get; set; }
         public string? Address { get; set; }
         public string? Avatar { get; set; }
+        [Required]
+        [Phone]
+        public override string? PhoneNumber { get; set; }
         public virtual ICollection<ApplicationUserRole>? UserRoles { get; set; }
     }
     public class ApplicationRole : IdentityRole { 

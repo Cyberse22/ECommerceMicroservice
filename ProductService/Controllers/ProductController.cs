@@ -31,7 +31,7 @@ namespace ProductService.Controllers
         }
 
         [HttpPut("{productId}")]
-        public async Task<IActionResult> UpdateProductAsync(string productId, ProductModel model)
+        public async Task<IActionResult> UpdateProductAsync(string productId, UpdateProductModel model)
         {
             await _productService.UpdateProductAsync(productId, model);
             return NoContent();

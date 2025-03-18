@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using UserService.Helpers;
 
 namespace UserService.Models
 {
@@ -16,10 +17,5 @@ namespace UserService.Models
         [Required]
         public string? Password { get; set; }
         [Required, Compare("Password")] public string? PasswordConfirmation { get; set; }
-    }
-
-    public class CreateAdmin : SignUpModel
-    {
-        public string Role { get; set; } = "Admin";
     }
 }

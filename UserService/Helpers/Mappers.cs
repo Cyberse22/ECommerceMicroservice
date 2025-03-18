@@ -8,7 +8,7 @@ namespace UserService.Helpers
         public Mappers() 
         {
             CreateMap<PasswordModel, SignInModel>().ReverseMap();
-
+            CreateMap<UserModel, ApplicationUser>().ReverseMap();
         }    
     }
 }

@@ -5,8 +5,10 @@ namespace UserService.Models
     public class SignInModel
     {
         [Required]
-        public string? Email { get; set; }
+        [Phone]
+        public string? PhoneNumber { get; set; }
         [Required]
+        [DataType(DataType.Password)]
         public string? Password { get; set; }
     }
 }

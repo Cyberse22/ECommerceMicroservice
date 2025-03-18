@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\OrderService.csproj": {}
+    "D:\\ECommerceMicroservice\\OrderService\\OrderService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\OrderService.csproj": {
+    "D:\\ECommerceMicroservice\\OrderService\\OrderService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\OrderService.csproj",
+        "projectUniqueName": "D:\\ECommerceMicroservice\\OrderService\\OrderService.csproj",
         "projectName": "OrderService",
-        "projectPath": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\OrderService.csproj",
-        "packagesPath": "C:\\Users\\kieth\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kieth\\source\\repos\\ECommerceMicroservice\\OrderService\\obj\\",
+        "projectPath": "D:\\ECommerceMicroservice\\OrderService\\OrderService.csproj",
+        "packagesPath": "C:\\Users\\Cyberse\\.nuget\\packages\\",
+        "outputPath": "D:\\ECommerceMicroservice\\OrderService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\kieth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Cyberse\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -71,6 +71,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
+            },
+            "dotenv.net": {
+              "target": "Package",
+              "version": "[3.2.1, )"
             }
           },
           "imports": [
@@ -92,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

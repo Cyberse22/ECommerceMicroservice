@@ -104,17 +104,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ProductModel"
+                "$ref": "#/components/schemas/UpdateProductModel"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ProductModel"
+                "$ref": "#/components/schemas/UpdateProductModel"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ProductModel"
+                "$ref": "#/components/schemas/UpdateProductModel"
               }
             }
           }
@@ -186,6 +186,33 @@
           "productPrice": {
             "type": "number",
             "format": "double",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateProductModel": {
+        "type": "object",
+        "properties": {
+          "productName": {
+            "type": "string",
+            "nullable": true
+          },
+          "productDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "productPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean",
             "nullable": true
           }
         },

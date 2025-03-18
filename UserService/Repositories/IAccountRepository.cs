@@ -6,12 +6,12 @@ namespace UserService.Repositories
 {
     public interface IAccountRepository
     {
-        Task<SignInResult> SignInAsync(string email, string password);
+        Task<SignInResult> SignInAsync(string phoneNumber, string password);
         Task<IdentityResult> SignUpAsync(SignUpModel model);
-        Task<IdentityResult> CreateAdmin(CreateAdmin model);
+        Task<IdentityResult> CreateAdmin(SignUpModel admin);
         Task<bool> AssignRoleAsync(ApplicationUser user, string role);
-        Task<bool> ChangePasswordAsync(string email, string oldPassword, string newPassword);
+        Task<bool> ChangePasswordAsync(string phoneNumber, string oldPassword, string newPassword);
         Task UpdateUserAsync(UserDbContext user);
-        Task<ApplicationUser> GetCurrentUserAsync(string email);
+        Task<ApplicationUser> GetCurrentUserAsync(string phoneNumber);
     }
 }
