@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sCu72TI/fzk=",
+  "dgSpecHash": "5APkQDNK+DE=",
   "success": true,
-  "projectFilePath": "D:\\ECommerceMicroservice\\ProductService\\ProductService.csproj",
+  "projectFilePath": "D:\\Study\\AgricultureECommcerce\\ECommerceBackend\\ProductService\\ProductService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cyberse\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Cyberse\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",

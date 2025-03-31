@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ECommerceMicroservice\\OrderService\\OrderService.csproj": {}
+    "D:\\Study\\AgricultureECommcerce\\ECommerceBackend\\OrderService\\OrderService.csproj": {}
   },
   "projects": {
-    "D:\\ECommerceMicroservice\\OrderService\\OrderService.csproj": {
+    "D:\\Study\\AgricultureECommcerce\\ECommerceBackend\\OrderService\\OrderService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ECommerceMicroservice\\OrderService\\OrderService.csproj",
+        "projectUniqueName": "D:\\Study\\AgricultureECommcerce\\ECommerceBackend\\OrderService\\OrderService.csproj",
         "projectName": "OrderService",
-        "projectPath": "D:\\ECommerceMicroservice\\OrderService\\OrderService.csproj",
+        "projectPath": "D:\\Study\\AgricultureECommcerce\\ECommerceBackend\\OrderService\\OrderService.csproj",
         "packagesPath": "C:\\Users\\Cyberse\\.nuget\\packages\\",
-        "outputPath": "D:\\ECommerceMicroservice\\OrderService\\obj\\",
+        "outputPath": "D:\\Study\\AgricultureECommcerce\\ECommerceBackend\\OrderService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

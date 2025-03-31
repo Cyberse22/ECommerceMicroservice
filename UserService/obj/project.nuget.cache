@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V/4H46xSHhc=",
+  "dgSpecHash": "azDO5XDS0Ww=",
   "success": true,
-  "projectFilePath": "D:\\ECommerceMicroservice\\UserService\\UserService.csproj",
+  "projectFilePath": "D:\\Study\\AgricultureECommcerce\\ECommerceBackend\\UserService\\UserService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cyberse\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Cyberse\\.nuget\\packages\\dotenv.net\\3.2.1\\dotenv.net.3.2.1.nupkg.sha512",

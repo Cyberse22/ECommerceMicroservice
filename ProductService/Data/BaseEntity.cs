@@ -10,9 +10,9 @@ namespace ProductService.Data
         [BsonRepresentation(BsonType.ObjectId)]
         public ObjectId Id { get; set; }
         [BsonElement("createddate")]
-        public DateOnly CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
         [BsonElement("updateddate")]
-        public DateOnly UpdatedDate { get; set; } = new DateOnly();
+        public DateTime UpdatedDate { get; set; } = DateTime.UtcNow;
         public bool IsActive { get; set; }
     }
 }

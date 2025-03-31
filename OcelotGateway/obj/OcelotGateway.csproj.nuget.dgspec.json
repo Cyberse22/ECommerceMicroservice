@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ECommerceMicroservice\\OcelotGateway\\OcelotGateway.csproj": {}
+    "D:\\Study\\AgricultureECommcerce\\ECommerceBackend\\OcelotGateway\\OcelotGateway.csproj": {}
   },
   "projects": {
-    "D:\\ECommerceMicroservice\\OcelotGateway\\OcelotGateway.csproj": {
+    "D:\\Study\\AgricultureECommcerce\\ECommerceBackend\\OcelotGateway\\OcelotGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ECommerceMicroservice\\OcelotGateway\\OcelotGateway.csproj",
+        "projectUniqueName": "D:\\Study\\AgricultureECommcerce\\ECommerceBackend\\OcelotGateway\\OcelotGateway.csproj",
         "projectName": "OcelotGateway",
-        "projectPath": "D:\\ECommerceMicroservice\\OcelotGateway\\OcelotGateway.csproj",
+        "projectPath": "D:\\Study\\AgricultureECommcerce\\ECommerceBackend\\OcelotGateway\\OcelotGateway.csproj",
         "packagesPath": "C:\\Users\\Cyberse\\.nuget\\packages\\",
-        "outputPath": "D:\\ECommerceMicroservice\\OcelotGateway\\obj\\",
+        "outputPath": "D:\\Study\\AgricultureECommcerce\\ECommerceBackend\\OcelotGateway\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

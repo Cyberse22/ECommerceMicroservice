@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ECommerceMicroservice\\CartService\\CartService.csproj": {}
+    "D:\\Study\\AgricultureECommcerce\\ECommerceBackend\\CartService\\CartService.csproj": {}
   },
   "projects": {
-    "D:\\ECommerceMicroservice\\CartService\\CartService.csproj": {
+    "D:\\Study\\AgricultureECommcerce\\ECommerceBackend\\CartService\\CartService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ECommerceMicroservice\\CartService\\CartService.csproj",
+        "projectUniqueName": "D:\\Study\\AgricultureECommcerce\\ECommerceBackend\\CartService\\CartService.csproj",
         "projectName": "CartService",
-        "projectPath": "D:\\ECommerceMicroservice\\CartService\\CartService.csproj",
+        "projectPath": "D:\\Study\\AgricultureECommcerce\\ECommerceBackend\\CartService\\CartService.csproj",
         "packagesPath": "C:\\Users\\Cyberse\\.nuget\\packages\\",
-        "outputPath": "D:\\ECommerceMicroservice\\CartService\\obj\\",
+        "outputPath": "D:\\Study\\AgricultureECommcerce\\ECommerceBackend\\CartService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
